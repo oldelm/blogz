@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style type="text/css">
+            .error {
+                color: red;
+                font-style: italic;
+            }
+            .blog-list-title{
+                font-family: Helvetica, Arial, Verdana, serif;
+            }
+            .blog-list-body{
+                font-family: Helvetica, Arial, Verdana, serif;
+            }
+        </style>
+    </head>
+<body>
+    <h3><a href="/blog">Main Blog Page</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/newpost">Add A Blog Entry</a> </h3>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

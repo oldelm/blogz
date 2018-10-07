@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <center> <h1> Add a Blog Entry </h1> </center>
+      
+    <form action="/newpost", method="POST">
+        <p>Title for your new blog:</p>
+        
+        <!--<textarea name="title" rows="1" cols="26">{{ title }}</textarea> -->
+        <!--<input name="username" type="text" value='{{username}}' /> -->
+        <!-- Was deleting title after 1st word, fixed with example from user signup^-->
+        <input name="title" type="text" value='{{ title }}'>
+        <p class='error'> {{ titleblank }} </p>
+        
+        <p>Your new blog:</p>
+        <textarea name="body" rows="16" cols="46">{{ body }}</textarea>
+        <p class='error'> {{ bodyblank }} </p>
+
+        <input type="submit" value= "Add entry">  
+    </form>
+    
+{% endblock %}
