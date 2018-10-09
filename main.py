@@ -28,7 +28,6 @@ def index():
     
 @app.route('/blog', methods=['GET'])
 def show_blogs():
-    #show just one blog entry
     if request.args.get('id'):
         myid = request.args.get('id')
         print("myid:", myid)
