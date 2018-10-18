@@ -6,19 +6,87 @@
             .error {
                 color: red;
                 font-style: italic;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            body{
+                padding-left: 8em;
+                padding-right: 8em;
+                padding-top: 1em;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            nav {
+                padding-bottom: .5em;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            .left-table{
+                float: left;
+            }
+            .right-table{
+                float: right;
+            }
+            td { 
+                padding-right: 1em;
             }
             .blog-list-title{
-                font-family: Helvetica, Arial, Verdana, serif;
+                padding-top: 100;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+
             }
             .blog-list-body{
-                font-family: Helvetica, Arial, Verdana, serif;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            .blog-body{
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            h1{
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+                padding-top: 1em;
+            }
+            h3{
+                padding-top: 2em;
+                font-family: Helvetica, Arial, Verdana, sans-serif;
+            }
+            .written-by{
+                font-style: italic;
+                font-size: .75em;
+                font-family: Helvetica, Arial, Verdana, sans-serif; 
+            }
+            hr {
+                margin: 20px auto;
             }
         </style>
     </head>
 <body>
-    <h3><a href="/blog">Main Blog Page</a>
+    <nav>
+    <table class="left-table">
+    <tr>
+        <td><a href='/'>home</a></td>   
+        <td><a href='/blog'>all posts</a></td>   
+        <td><a href='/newpost'>new post</a></td>
+    </tr>
+    </table>
+    <table class="right-table">
+    <tr>
+        <td><a href='/login'>login</a></td>   
+        <td><a href='/logout'>logout</a></td>
+    </tr>
+    </table>
+    </nav>
+
+    <!--{% with messages = get_flashed_messages(with_categories=True) %}
+        <ul>
+        {% for category,message in messages %}
+            <li class="{{category}}">{{message}}</li>
+        {% endfor %}
+        </ul>
+    {% endwith %}-->
+
+    <!--<h3><a href="/blog">Main Blog Page</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="/newpost">Add A Blog Entry</a> </h3>
+      <a href="/newpost">Add A Blog Entry</a> </h3>-->
+
+
+	
     {% block content %}
     {% endblock %}
 
